@@ -10,9 +10,10 @@
 
   <header>
     <div>
+      <!--Внес изменения: <label> был отдельно от поля поиска-->
       <a><img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип сайта"></a>
-      <form action="#" method="POST"><label for="search-field"></label><input type="search" name="search"
-          id="search-field" placeholder="Поиск:"></form>
+      <form action="#" method="POST"><label for="search-field"><input type="search" name="search" id="search-field"
+            placeholder="Поиск:"></label></form>
       <ul>
         <li><a href="#">Закладки:<span>0</span></a></li>
         <li><a href="#">Корзина:<span>0</span></a></li>
@@ -41,45 +42,47 @@
   <main>
     <h1>Интернет-магазин "Техномарт"</h1>
     <section>
+      <!--Добавил заголовок для всей секции и изменил градацию заголовков-->
+      <h2>Категории</h2>
       <ul>
         <li>
-          <h2>Материалы <span>NEW</span></h2>
+          <h3>Материалы <span>NEW</span></h3>
           <a href="catalog.html">На любой вкус</a>
         </li>
         <li>
-          <h2>Инструмент</h2>
+          <h3>Инструмент</h3>
           <a href="catalog.html">На все случаи</a>
         </li>
         <li>
-          <h2>Техника</h2>
+          <h3>Техника</h3>
           <a href="catalog.html">Для стройки</a>
         </li>
         <li>
-          <h2>Скидка 50%</h2>
+          <h3>Скидка 50%</h3>
           <a href="catalog.html">На все 350 товаров</a>
         </li>
         <li>
-          <h2>Доставка</h2>
+          <h3>Доставка</h3>
           <a href="#">Бесплатно</a>
         </li>
         <li>
           <div>
-            <h2>Перфораторы</h2>
+            <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
-            <button type="button" value="left"></button>
-            <button type="button" value="right"></button>
             <a href="catalog.html">Открыть каталог</a>
           </div>
           <div>
-            <h2>Дрели</h2>
+            <h3>Дрели</h3>
             <p>Соседям на радость</p>
-            <button type="button" value="left"></button>
-            <button type="button" value="right"></button>
             <a href="catalog.html">Открыть каталог</a>
           </div>
-          <!--Не знаю как обозначить эти штучки, которые на слайдере в виде радиокнопок. Может это и есть кнопка?-->
-          <button type="button"></button>
-          <button type="button"></button>
+          <!--Перенес кнопки слайдера и добавил контейнер для дальнейшей стилизации-->
+          <div>
+            <button type="button" value="left"></button>
+            <button type="button" value="right"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
         </li>
       </ul>
     </section>
@@ -88,50 +91,60 @@
         <h2>Популярные товары:</h2>
         <a href="#">Все популярные товары</a>
       </div>
-      <div>
+      <div><!--Добавил ссылку на товар, и добавил отдельный контейнер для карточек, чтобы потом их использовать в каталоге товаров-->
         <ul>
           <li>
-            <figure>
-              <!--Может я слишком заморачиваюсь в оформлении карточек популярных товаров? Или так тоже можно?-->
-              <img src="https://via.placeholder.com/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-              <figcaption>Перфоратор BOSCH<br>BFG 9000</figcaption>
-            </figure>
-            <p><s>32500 Р.</s></p>
-            <button type="button">25500 Р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <div>
+              <figure>
+                <a href="catalog.html"><img src="https://via.placeholder.com/184x164" width="184" height="164"
+                    alt="Перфоратор BOSCH BFG 9000"></a>
+                <figcaption>Перфоратор BOSCH<br>BFG 9000</figcaption>
+              </figure>
+              <p><s>32500 Р.</s></p>
+              <button type="button">25500 Р.</button>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </div>
           </li>
           <li>
-            <figure>
-              <img src="https://via.placeholder.com/127x112" width="127" height="112"
-                alt="Перфоратор BOSCH BFG 3000"><span>NEW</span>
-              <figcaption>Перфоратор BOSCH<br> BFG 3000</figcaption>
-            </figure>
-            <p><s>22500 Р.</s></p>
-            <button type="button">15500 Р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <div>
+              <figure>
+                <a><img src="https://via.placeholder.com/127x112" width="127" height="112"
+                    alt="Перфоратор BOSCH BFG 3000"></a><span>NEW</span>
+                <figcaption>Перфоратор BOSCH<br> BFG 3000</figcaption>
+              </figure>
+              <p><s>22500 Р.</s></p>
+              <button type="button">15500 Р.</button>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </div>
+
           </li>
           <li>
-            <figure>
-              <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-              <figcaption>Перфоратор BOSCH<br> BFG 6000</figcaption>
-            </figure>
-            <p><s>30500 Р.</s></p>
-            <button type="button">25500 Р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <div>
+              <figure>
+                <a><img src="https://via.placeholder.com/144x128" width="144" height="128"
+                    alt="Перфоратор BOSCH BFG 6000"></a>
+                <figcaption>Перфоратор BOSCH<br> BFG 6000</figcaption>
+              </figure>
+              <p><s>30500 Р.</s></p>
+              <button type="button">25500 Р.</button>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </div>
           </li>
           <li>
-            <figure>
-              <img src="https://via.placeholder.com/184x164" width="127" height="112"
-                alt="Перфоратор BOSCH BFG 2000"><span>NEW</span>
-              <figcaption>Перфоратор BOSCH<br> BFG 2000</figcaption>
-            </figure>
-            <p><s>22500 Р.</s></p>
-            <button type="button">12500 Р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <div>
+              <figure>
+                <a><img src="https://via.placeholder.com/184x164" width="127" height="112"
+                    alt="Перфоратор BOSCH BFG 2000"></a><span>NEW</span>
+                <figcaption>Перфоратор BOSCH<br> BFG 2000</figcaption>
+              </figure>
+              <p><s>22500 Р.</s></p>
+              <button type="button">12500 Р.</button>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -143,15 +156,30 @@
       </div>
       <div>
         <ul>
-          <li><a href="#"><img src="https://via.placeholder.com/126x37" width="126" height="37" alt="BOSCH"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/123x40" width="123" height="40" alt="Makita"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/146x44" width="146" height="44" alt="DeWalt"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/200x76" width="200" height="76" alt="Интерскол"></a>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/126x37" width="126" height="37" alt="BOSCH"></a>
           </li>
-          <li><a href="#"><img src="https://via.placeholder.com/169x31" width="169" height="31" alt="HITACHI"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/121x73" width="121" height="73" alt="LG"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/151x98" width="151" height="98" alt="AEG"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/206x73" width="206" height="73" alt="Metabo"></a></li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/123x40" width="123" height="40" alt="Makita"></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/146x44" width="146" height="44" alt="DeWalt"></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/200x76" width="200" height="76" alt="Интерскол"></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/169x31" width="169" height="31" alt="HITACHI"></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/121x73" width="121" height="73" alt="LG"></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/151x98" width="151" height="98" alt="AEG"></a>
+          </li>
+          <li>
+            <a href="#"><img src="https://via.placeholder.com/206x73" width="206" height="73" alt="Metabo"></a>
+          </li>
         </ul>
 
       </div>
@@ -173,6 +201,7 @@
       </ul>
       <ul>
         <li>
+          <!--Вспомнил еще один вопрос: тут при нажатии на тот или иной пункт, один элемент скрывается, а другой добавляется и вместе с ним добавляется картинка. Нужно ли сейчас добавлять эту картинку в разметку или это делается другим способом?-->
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо
             заработаем,<br>поднимая его на ваш этаж!</p>
@@ -233,17 +262,19 @@
       </ul>
     </section>
     <section>
+      <!--Да и правда выпало, а может я промахнулся :)-->
       <h2>Соц.сети, обратная связь, копирайт</h2>
       <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
+      <ul>
+        <li><a href="#">ВКонтакте</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+      <p>Обратная связь:<br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+      <p>Разработано-<br><a href="#">htmlacademy.ru</a></p>
     </section>
   </footer>
-  <ul>
-    <li><a href="#">ВКонтакте</a></li>
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">Instagram</a></li>
-  </ul>
-  <p>Обратная связь:<br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-  <p>Разработано-<br><a href="#">htmlacademy.ru</a></p>
+
 </body>
 
 </html>
