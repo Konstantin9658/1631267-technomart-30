@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="icon.svg" type="image/svg+×ml">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
@@ -29,22 +29,26 @@
     </div>
     <div class="container header-middle-block">
       <p class="header-offer">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</p>
-      <p><a class="header-contacts-telephone" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-      <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <a class="header-login" href="#">Войти</a>
-      <a class="header-registration" href="#">Регистрация</a>
+      <p class="contats-header">
+        <a class="header-contacts-telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <br><span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+      </p>
+      <button class="header-login" href="#">Войти</button>
+      <button class="header-registration" href="#">Регистрация</button>
     </div>
-    <nav class="container site-navigation">
-      <ul class="navigation-list">
-        <li class="navigation-item"><a href="#">Главная</a></li>
-        <li class="navigation-item"><a href="#">Компания</a></li>
-        <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
-        <li class="navigation-item"><a href="#">Новости</a></li>
-        <li class="navigation-item"><a href="#">Спецпредложения</a></li>
-        <li class="navigation-item"><a href="#">Доставка</a></li>
-        <li class="navigation-item"><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
+    <div class="main-navigation-wrapper">
+      <nav class="container site-navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item"><a href="#">Главная</a></li>
+          <li class="navigation-item"><a href="#">Компания</a></li>
+          <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
+          <li class="navigation-item"><a href="#">Новости</a></li>
+          <li class="navigation-item"><a href="#">Спецпредложения</a></li>
+          <li class="navigation-item"><a href="#">Доставка</a></li>
+          <li class="navigation-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
@@ -52,8 +56,7 @@
       <h2 class="visually-hidden">Категории</h2>
       <ul class="categories-list">
         <li class="category-item">
-          <h3 class="category-title">Материалы</h3>
-          <!--<span class="new">NEW</span>-->
+          <h3 class="new category-title">Материалы</h3>
           <a class="button-categories" href="catalog.html">На любой вкус</a>
         </li>
         <li class="category-item">
@@ -103,52 +106,57 @@
         <h2 class="title popular-title">Популярные товары:</h2>
         <a href="#" class="button popular-button">Все популярные товары</a>
       </div>
-        <ul class="goods-cards goods-list">
-          <li class="card good-item">
-            <img class="card-content" src="img/bfg9000.png" width="184" height="164"
-              alt="Сетевой перфоратор BOSCH BFG 9000 SDS-Max">
-            <h3 class="card-description">Перфоратор BOSCH BFG 9000</h3>
-            <s class="old-price">32500 Р.</s>
-            <button class="button-price" type="button">25500 Р.</button>
-            <div class="buttons card-buttons">
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-mark" type="button">В закладки</button>
-            </div>
-          </li>
-          <li class="card good-item">
-            <img class="card-content" src="img/bfg3000.png" width="127" height="112"
-              alt="Аккумуляторный перфоратор BOSCH BFG 3000"><span class="new">NEW</span>
-            <h3 class="card-description">Перфоратор BOSCH<br> BFG 3000</h3>
-            <s class="old-price">22500 Р.</s>
-            <button class="button-price" type="button">15500 Р.</button>
-            <div class="buttons card-buttons">
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-mark" type="button">В закладки</button>
-            </div>
-          </li>
-          <li class="card good-item">
-            <img class="card-content" src="img/bfg6000.png" width="144" height="128"
+      <ul class="goods-cards goods-list">
+        <li class="card good-item">
+          <div class="card-content">
+            <img src="img/bfg9000.png" width="184" height="164" alt="Сетевой перфоратор BOSCH BFG 9000 SDS-Max">
+          </div>
+          <h3 class="card-description">Перфоратор BOSCH BFG 9000</h3>
+          <s class="old-price">32500 Р.</s>
+          <button class="button-price" type="button">25500 Р.</button>
+          <div class="buttons card-buttons">
+            <button class="button button-buy" type="button">Купить</button>
+            <button class="button button-mark" type="button">В закладки</button>
+          </div>
+        </li>
+        <li class="card good-item new">
+          <div class="card-content">
+            <img src="img/bfg3000.png" width="127" height="112" alt="Аккумуляторный перфоратор BOSCH BFG 3000">
+          </div>
+          <h3 class="card-description">Перфоратор BOSCH BFG 3000</h3>
+          <s class="old-price">22500 Р.</s>
+          <button class="button-price" type="button">15500 Р.</button>
+          <div class="buttons card-buttons">
+            <button class="button button-buy" type="button">Купить</button>
+            <button class="button button-mark" type="button">В закладки</button>
+          </div>
+        </li>
+        <li class="card good-item">
+          <div class="card-content">
+            <img src="img/bfg6000.png" width="144" height="128"
               alt="Аккумуляторный перфоратор BOSCH BFG 6000, с улучшенными характеристиками">
-            <h3 class="card-description">Перфоратор BOSCH<br> BFG 6000</h3>
-            <s class="old-price">30500 Р.</s>
-            <button class="button-price" type="button">25500 Р.</button>
-            <div class="buttons card-buttons">
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-mark" type="button">В закладки</button>
-            </div>
-          </li>
-          <li class="card good-item">
-            <img class="card-content" src="img/bfg2000.png" width="127" height="112"
-              alt="Аккумуляторный перфоратор BOSCH BFG 2000"><span class="new">NEW</span>
-            <h3 class="card-description">Перфоратор BOSCH BFG 2000</h3>
-            <s class="old-price">22500 Р.</s>
-            <button class="button-price" type="button">12500 Р.</button>
-            <div class="buttons card-buttons">
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-mark" type="button">В закладки</button>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <h3 class="card-description">Перфоратор BOSCH BFG 6000</h3>
+          <s class="old-price">30500 Р.</s>
+          <button class="button-price" type="button">25500 Р.</button>
+          <div class="buttons card-buttons">
+            <button class="button button-buy" type="button">Купить</button>
+            <button class="button button-mark" type="button">В закладки</button>
+          </div>
+        </li>
+        <li class="card good-item new">
+          <div class="card-content">
+            <img src="img/bfg2000.png" width="127" height="112" alt="Аккумуляторный перфоратор BOSCH BFG 2000">
+          </div>
+          <h3 class="card-description">Перфоратор BOSCH BFG 2000</h3>
+          <s class="old-price">22500 Р.</s>
+          <button class="button-price" type="button">12500 Р.</button>
+          <div class="buttons card-buttons">
+            <button class="button button-buy" type="button">Купить</button>
+            <button class="button button-mark" type="button">В закладки</button>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="popular-block container">
       <div class="popular">
@@ -189,29 +197,28 @@
         <div class="services-title">
           <h2 class="title">Сервисы</h2>
           <p class="description">Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо
-            всех
-            сил, чтобы сделать ваши покупки приятными.</p>
+            всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
-
-        <ul class="services-list">
-          <li class="service-item">
-            <button class="button-services current" type="button">Доставка</button>
-          </li>
-          <li class="service-item">
-            <button class="button-services" type="button">Гарантия</button>
-          </li>
-          <li class="service-item">
-            <button class="button-services" type="button">Кредит</button>
-          </li>
-        </ul>
-        <ul class="points-list">
-          <li class="point-item show">
-            <h3 class="title point">Доставка</h3>
-            <p class="description">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно
-              бесплатно!<br>Ведь мы неплохо
-              заработаем,<br>поднимая его на ваш этаж!</p>
-          </li>
-          <li class="point-item hidden">
+        <div class="services-wrapper">
+          <ul class="services-list">
+            <li class="service-item">
+              <button class="button-services current" type="button">Доставка</button>
+            </li>
+            <li class="service-item">
+              <button class="button-services" type="button">Гарантия</button>
+            </li>
+            <li class="service-item">
+              <button class="button-services" type="button">Кредит</button>
+            </li>
+          </ul>
+          <ul class="points-list">
+            <li class="point-item show">
+              <h3 class="title point">Доставка</h3>
+              <p class="description">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно
+                бесплатно!<br>Ведь мы неплохо
+                заработаем,<br>поднимая его на ваш этаж!</p>
+            </li>
+            <!--<li class="point-item hidden">
             <h3 class="title point">Гарантия</h3>
             <p class="description">Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара,
               спровоцированного
@@ -223,8 +230,9 @@
             <p class="description">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.
             </p>
             <button class="button button-credit" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
-          </li>
-        </ul>
+          </li>-->
+          </ul>
+        </div>
       </div>
     </section>
     <div class="index-column container">
