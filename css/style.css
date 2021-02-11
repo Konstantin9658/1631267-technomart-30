@@ -222,10 +222,6 @@ a {
   margin-right: 9px;
 }
 
-.header-bookmark::before:hover {
-  color: var(--basic-white);
-}
-
 .header-cart::before {
   content: url("../img/icon/icon-cart.svg");
   display: inline-block;
