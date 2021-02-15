@@ -196,6 +196,8 @@ a {
 
 .header-order {
   background-color: var(--basic-green);
+  padding: 9px 16px 9px 19px;
+  display: inline-block;
 }
 
 .user-navigation {
@@ -203,19 +205,14 @@ a {
   position: relative;
 }
 
-.header-order,
-.header-bookmark,
-.header-cart {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
+.header-bookmark {
   display: inline-block;
   padding: 9px 24px 9px 20px;
+}
+
+.header-cart {
+  display: inline-block;
+  padding: 9px 26px;
 }
 
 .header-bookmark::before {
@@ -249,8 +246,8 @@ a {
 /*Header Middle Block*/
 
 .header-middle-block {
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header-order:hover,
@@ -280,7 +277,7 @@ a {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 30px;
-  width: 315px;
+  padding: 16px 95px 16px 30px;
   align-self: center;
 }
 
@@ -327,7 +324,7 @@ a {
 }
 
 .header-login {
-  margin-left: 43px;
+  margin-left: 69px;
   background-color: var(--basic-white);
   padding: 12px 27px 12px 19px;
 }
@@ -501,8 +498,63 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1px 142px 21px 23px;
+  margin: 0 142px 21px 23px;
   transition: all 0.3s;
+}
+
+.button-slider-bullit {
+  z-index: 20;
+  bottom: 36px;
+  left: 295px;
+  display: flex;
+  width: 30px;
+  justify-content: space-between;
+}
+
+.button-slider-bullit button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.button-slider-bullit .current {
+  background-color: var(--basic-red);
+  border: 2px solid var(--basic-white);
+}
+
+.slider-button-left {
+  position: absolute;
+  left: 24px;
+  top: 122px;
+  background: url("../img/icon/icon-left.svg") no-repeat 0 0;
+  width: 22px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-button-right {
+  position: absolute;
+  background: url("../img/icon/icon-left.svg") no-repeat 0 0;
+  transform: rotate(180deg);
+  width: 22px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  left: 578px;
+  top: 122px;
 }
 
 .button-categories:hover {
@@ -681,7 +733,7 @@ a {
   font-size: 18px;
   line-height: 20px;
   display: block;
-  margin: 24px 17px 7px;
+  margin: 26px 17px 5px;
   width: 183px;
   min-height: 43px;
 }
@@ -713,7 +765,7 @@ a {
   margin-right: 34px;
   margin-bottom: 21px;
   margin-left: 45px;
-  padding: 10px 19px;
+  padding: 10px 0;
   margin-top: auto;
 }
 
@@ -875,18 +927,29 @@ a {
   background-color: var(--basic-background);
 }
 
+.services-title h2 {
+  padding-bottom: 25px;
+  margin: 0;
+}
+
 .services ul {
   padding: 0;
   margin: 0;
+  position: relative;
 }
+
+.services-list::after {
+  content: url("../img/pocket-button-services.svg");
+  position: absolute;
+  top: -45px;
+  right: 0;
+}
+
 .services-title {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
   padding-top: 64px;
   padding-bottom: 70px;
 }
 
-.services-title .title,
 .services-title .description,
 .points-list .title {
   padding: 0;
@@ -934,8 +997,7 @@ a {
   transition: all 0.3s;
 }
 
-.button-services:hover,
-.button-services:focus {
+.button-services:hover:not(.active) {
   background-color: var(--very-dark-blue);
 }
 
@@ -953,14 +1015,16 @@ a {
   padding-left: 80px;
   width: 619px;
   min-height: 283px;
-}
-
-.point-item {
   display: none;
 }
 
-.point-item.show {
+.show {
   display: block;
+}
+
+.active {
+  background-color: var(--basic-white);
+  color: var(--purple-blue);
 }
 
 .delivery {
@@ -1283,22 +1347,26 @@ a {
 }
 
 .sort span {
+  font-family: "PT Sans", "Arial", serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
   color: var(--basic-black);
   border: none;
   border-bottom: 1px dotted var(--basic-red);
-  height: 1px;
-  width: 100%;
   opacity: 0.3;
 }
 
 .sort {
   margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sort span:hover {
   color: var(--basic-black);
   border-bottom: 1px solid var(--basic-red);
-  width: 100%;
   opacity: 1;
 }
 
@@ -1376,12 +1444,16 @@ a {
 
 .title-filter,
 .sort-title {
-  display: flex;
-  padding-left: 18px;
-  align-items: center;
-  min-height: 38px;
-  flex-wrap: wrap;
+  display: inline-block;
   margin: 0;
+}
+
+.title-filter {
+  padding: 10px 151px 10px 18px;
+}
+
+.sort-title {
+  padding: 10px 140px 10px 18px;
 }
 
 .page-filter {
