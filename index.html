@@ -24,8 +24,8 @@
           </label>
         </form>
         <div class="user-navigation">
-          <a class="header-bookmark" href="#">Закладки: <span>0</span></a>
-          <a class="header-cart" href="#">Корзина: <span>0</span></a>
+          <a class="header-bookmark no-empty" href="#">Закладки: <span>0</span></a>
+          <a class="header-cart no-empty" href="#">Корзина: <span>0</span></a>
           <a class="header-order" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -71,7 +71,7 @@
           <a class="button-categories" href="catalog.html">Для стройки</a>
         </li>
         <li class="category-item">
-          <h3 class="category-title">Скидка 50%</h3>
+          <h3 class="category-title">Скидки 50%</h3>
           <a class="button-categories" href="catalog.html">На 350 товаров</a>
         </li>
         <li class="category-item">
@@ -98,7 +98,7 @@
             <button class="slider-button-right" type="button"></button>
           </div>
           <div class="button-slider-bullit">
-            <button  type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Первый слайд"></button>
             <button class="current" type="button" aria-label="Второй слайд"></button>
           </div>
         </li>
@@ -242,14 +242,16 @@
       <section class="about">
         <h2 class="visually-hidden">О компании</h2>
         <h3 class="title">Компания «Техномарт»</h3>
-        <p class="description">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br> ремонта и
-          строительства не оставит равнодушными любителей сэкономить на<br> гастарбайтерах. </p>
-        <p class="description">Мы можем доставить ваш товар в самые отдаленные точки
-          России!<br>Техномарт работает со многими транспортными компаниями:</p>
+        <div class="description">
+          <p class="description-about">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>ремонта и
+            строительства не оставит равнодушными любителей сэкономить на<br>гастарбайтерах. </p>
+          <p class="description-about">Мы можем доставить ваш товар в самые отдаленные точки
+            России!<br>Техномарт работает со многими транспортными компаниями:</p>
+        </div>
         <ul class="partners-list">
           <li class="partner-item">Деловые линии</li>
           <li class="partner-item">Автотрейдинг</li>
-          <li class="partner-item">ЖилДорЭкспедиция</li>
+          <li class="partner-item">ЖeлДорЭкспедиция</li>
         </ul>
         <a class="button-more" href="#">Подробнее о компании</a>
       </section>
@@ -268,7 +270,7 @@
       <div class="container">
         <h2 class="visually-hidden">Контакты и навигация</h2>
         <div>
-          <a class="logo" href="index.html"><img src="img/logo/logo-technomart.svg" width="108" height="18"
+          <a class="logo" href="index.html"><img src="img/logo/logo-technomart-footer.svg" width="138" height="23"
               alt="Логотип «Техномарт»"></a>
           <address class="footer-address">
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -286,7 +288,7 @@
           <ul class="navigation-list-footer">
             <li class="footer-list-item catalog"><a href="catalog.html">Материалы</a></li>
             <li class="footer-list-item catalog"><a href="catalog.html">Техника</a></li>
-            <li class="footer-list-item catalog"><a href="catalog.html">Инструменты</a></li>
+            <li class="footer-list-item catalog"><a href="catalog.html">Инструмент</a></li>
             <li class="footer-list-item catalog"><a href="catalog.html">Спецпредложения</a></li>
           </ul>
         </div>
@@ -320,6 +322,7 @@
                   fill="white" />
               </svg>
             </a></li>
+
         </ul>
         <p class="mail">Обратная связь:<br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p class="site">Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
