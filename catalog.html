@@ -35,13 +35,33 @@
         <a class="header-contacts-telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </address>
-      <div class="user-info">
-        <a class="user-name">Равшан Джамшутович</a>
-        <a class="user-logout"></a>
-        <a class="my-orders" href="#">Мои заказы</a>
-        <a class="account" href="#">Личный кабинет</a>
+      <div class="user-navigation__catalog">
+        <div class="user-info">
+          <a class="user-avatar">
+            <svg width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.881 14.666C15.737 13.931 13.625 13 12.674 12.276C12.017 11.775 11.904 10.658 12.157 9.861C13.275 8.958 14.021 7.384 14.021 5.583C14.021 2.776 12.221 0.5 10 0.5C7.77902 0.5 5.97901 2.776 5.97901 5.583C5.97901 7.384 6.72501 8.957 7.84201 9.86C8.09501 10.658 7.98302 11.775 7.32502 12.276C6.37502 13 4.26201 13.93 2.11801 14.666C-0.0259852 15.402 1.48343e-05 18.5 1.48343e-05 18.5H20C20 18.5 20.025 15.401 17.881 14.666Z"
+                fill="#C5C5C5" />
+            </svg>
+          </a>
+          <a class="user-name">Равшан Джамшутович</a>
+          <a class="user-logout">
+            <svg width="20" height="17" viewbox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
+              <path
+                d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z"
+                fill="#C5C5C5" />
+            </svg>
+          </a>
+        </div>
+        <div class="user-btn">
+          <a class="my-orders" href="#">Мои заказы</a>
+          <a class="account" href="#">Личный кабинет</a>
+        </div>
+
       </div>
     </div>
+
     <div class="main-navigation-wrapper">
       <nav class="container site-navigation">
         <ul class="navigation-list">
@@ -60,14 +80,13 @@
     <h1 class="visually-hidden">Каталог товаров</h1>
     <div class="container">
       <ul class="breadcrumbs-list">
-        <!--Правильно ли так сделать (добавить эту иконку в разметку)? Что-то по другому не получается-->
         <li class="breadcrumb-item"><a href="index.html"><svg width="14" height="12" viewbox="0 0 14 12" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE" />
-            <path
-              d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z"
-              fill="#C1C6CE" />
-          </svg></a>
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE" />
+              <path
+                d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z"
+                fill="#C1C6CE" />
+            </svg></a>
         </li>
         <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
         <li class="breadcrumb-item"><a href="#">Инструменты</a></li>
@@ -84,40 +103,53 @@
           <h3 class="title-filter">Фильтр:</h3>
         </div>
         <form class="form-filter" action="https://echo.htmlacademy.ru/" method="GET">
-          <fieldset class="price">
+          <fieldset class="filter-item">
             <legend>Цена:</legend>
-            <label>
-              <input type="range" min="0" max="30000" step="1">
-            </label>
-            <label>
-              <input type="number" name="min-price" value="0">
-            </label>
-            <span>-</span>
-            <label>
-              <input type="number" name="max-price" value="30000">
-            </label>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 9%;"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 73%;"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="text" name="min-price" value="0">
+                </label>
+                –
+                <label class="max-price">
+                  <input type="text" name="max-price" value="30000">
+                </label>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="manufacturers__catalog">
             <legend>Производители:</legend>
             <ul class="checkbox-list">
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="BOSCH" id="BOSCH-id" checked>
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="BOSCH"
+                  id="BOSCH-id" checked>
                 <label for="BOSCH-id">BOSCH</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="Interskol" id="Interskol-id">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Interskol"
+                  id="Interskol-id">
                 <label for="Interskol-id">Интерскол</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="Makita" id="Makita-id" checked>
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Makita"
+                  id="Makita-id" checked>
                 <label for="Makita-id">Makita</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="DeWalt" id="DeWalt-id">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="DeWalt"
+                  id="DeWalt-id">
                 <label for="DeWalt-id">DeWalt</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="HITACHI" id="HITACHI-id">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="HITACHI"
+                  id="HITACHI-id">
                 <label for="HITACHI-id">HITACHI</label>
               </li>
             </ul>
@@ -126,13 +158,13 @@
             <legend>Питание:</legend>
             <ul class="radio-list">
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="power" id="battery-id"
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power" id="battery-id"
                   value="Аккумуляторные" checked>
                 <label for="battery-id">Аккумуляторные</label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="power" id="electric-id"
-                  value="Сетевые">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power"
+                  id="electric-id" value="Сетевые">
                 <label for="electric-id">Сетевые</label>
               </li>
             </ul>
@@ -142,13 +174,12 @@
       </section>
       <section class="catalog-list">
         <div class="sort">
-          <!--Может это список? -->
           <h2 class="sort-title">Сортировка:</h2>
-          <span class="choose">По цене</span>
-          <span class="">По типу</span>
-          <span class="">По функционалу</span>
-          <button class="button-sort" type="button"></button>
-          <button class="button-sort" type="button"></button>
+          <span class="sort-item choose">По цене</span>
+          <span class="sort-item">По типу</span>
+          <span class="sort-item">По функционалу</span>
+          <button class="button-sort btn-sort-up" type="button" disabled></button>
+          <button class="button-sort btn-sort-down" type="button"></button>
         </div>
         <ul class="goods-list goods-cards__catalog">
           <li class="card good-item">
@@ -294,7 +325,7 @@
       <div class="container">
         <h2 class="visually-hidden">Контакты и навигация</h2>
         <div>
-          <a class="logo" href="index.html"><img src="img/logo/logo-technomart.svg" width="108" height="18"
+          <a class="logo" href="index.html"><img src="img/logo/logo-technomart-footer.svg" width="138" height="23"
               alt="Логотип «Техномарт»"></a>
           <address class="footer-address">
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -312,7 +343,7 @@
           <ul class="navigation-list-footer">
             <li class="footer-list-item catalog"><a href="catalog.html">Материалы</a></li>
             <li class="footer-list-item catalog"><a href="catalog.html">Техника</a></li>
-            <li class="footer-list-item catalog"><a href="catalog.html">Инструменты</a></li>
+            <li class="footer-list-item catalog"><a href="catalog.html">Инструмент</a></li>
             <li class="footer-list-item catalog"><a href="catalog.html">Спецпредложения</a></li>
           </ul>
         </div>
