@@ -154,6 +154,7 @@ a {
   width: 220px;
   min-height: 42px;
   box-shadow: 0 5px 0 0 var(--strong-red);
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -202,8 +203,7 @@ a {
 }
 
 .header-form:hover label::before,
-.header-form:focus-within label::before
-/* ,.header-form:hover .search */ {
+.header-form:focus-within label::before {
   filter: brightness(0) invert(100%);
 }
 
@@ -219,11 +219,11 @@ a {
   color: var(--basic-black);
 }
 
-.search {
+.search + label {
   filter: brightness(0) invert(100%);
 }
 
-.search:focus-within {
+.header-form + label:focus-within {
   filter: brightness(0);
 }
 
@@ -255,6 +255,10 @@ a {
 .header-cart {
   display: inline-block;
   padding: 9px 26px;
+}
+
+.no-empty {
+  background-color: var(--basic-red);
 }
 
 .header-bookmark::before {
@@ -360,9 +364,15 @@ a {
   vertical-align: middle;
 }
 
+.header-contacts-telephone:hover,
+.header-contacts-telephone:focus {
+  box-shadow: 0 5px 25px rgba(41, 52, 73, 0.2);
+  opacity: 0.7;
+}
+
 .header-address {
   color: var(--purple-blue);
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -387,7 +397,7 @@ a {
 .header-login,
 .header-registration {
   color: var(--basic-black);
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum","Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
@@ -400,7 +410,11 @@ a {
 }
 
 .header-login:hover path,
-.header-login:focus path {
+.header-login:focus path,
+.user-avatar:hover path,
+.user-avatar:focus path,
+.user-logout:hover path,
+.user-logout:focus path {
   fill: var(--basic-grey);
 }
 
@@ -413,7 +427,10 @@ a {
 
 .header-login:active,
 .header-registration:active,
-.header-login:active path {
+.header-login:active path,
+.user-avatar:active path,
+.user-logout:active path,
+.user-name:active {
   color: var(--basic-greylight);
   fill: var(--basic-greylight);
 }
@@ -660,12 +677,12 @@ a {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
   text-transform: uppercase;
   appearance: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  appearance: none;
   transition: all 0.3s;
 }
 
@@ -814,6 +831,16 @@ a {
   margin-top: auto;
 }
 
+.button-price:hover,
+.button-price:focus {
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.button-price:active {
+  opacity: 0.2;
+}
+
 .buttons {
   background-color: var(--basic-white);
   position: absolute;
@@ -871,15 +898,26 @@ a {
   min-height: 38px;
   margin: 0 auto;
   padding: 7px 0;
+  cursor: pointer;
 }
 
 .button-buy {
   background: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--rich-green);
   border-radius: 2px;
-  min-height: 35px;
-  margin-bottom: 11px;
-  padding-top: 11px;
+  min-height: 38px;
+  margin-bottom: 9px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.button-buy::before {
+  content: url("../img/icon/icon-cart.svg");
+  position: absolute;
+  display: inline-block;
+  opacity: 0.3;
+  left: 28px;
+  top: 10px;
 }
 
 .button-mark {
@@ -1351,6 +1389,7 @@ a {
   color: var(--basic-black);
   margin-left: auto;
   margin-top: auto;
+  cursor: pointer;
 }
 
 .user-navigation__catalog {
@@ -1367,6 +1406,14 @@ a {
   line-height: 21px;
   color: var(--basic-black);
   margin-left: 21px;
+ }
+
+ .user-info p {
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+   margin-left: 19px;
+   margin-bottom: 6px;
  }
 
 .user-avatar {
@@ -1395,14 +1442,18 @@ a {
 
 .account {
   margin-right: 44px;
+  position: relative;
 }
 
 .account::before {
+  position: absolute;
   content: "";
-  width: 6px;
-  height: 7px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: var(--purple-blue);
+  left: -18px;
+  top: 9px;
 }
 
 .user-btn {
@@ -1412,7 +1463,9 @@ a {
 }
 
 .my-orders:hover,
-.account:hover {
+.account:hover,
+.my-orders:focus,
+.account:focus {
   color: var(--basic-red);
 }
 
@@ -1473,30 +1526,27 @@ a {
   margin-right: 46px;
 }
 
-.btn-sort-up {
-  background: url("../img/icon/icon-sort-tangle.svg") no-repeat 0 0;
-}
-
 .btn-sort-down {
   margin-right: 14px;
-  margin-left: 20px;
-}
-
-
- .btn-sort-down:not(:disabled) {
-  background: url("../img/icon/icon-sort-tangle.svg") no-repeat 0 0;
+  margin-left: 22px;
   transform: rotate(180deg);
 }
 
-.button-sort ~ disabled {
-  background: url("../img/icon/icon-sort-tangle-disabled.svg") no-repeat 0 0;
+.button-sort:hover path,
+.button-sort:focus path {
+  fill: var(--basic-black);
 }
 
-.button-sort {
+.btn-sort__active path {
+  fill: var(--basic-red);
+}
+
+.button-sort,
+.sort-item {
+  background: transparent;
   border: none;
   appearance: none;
-  width: 11px;
-  height: 10px;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -1533,7 +1583,12 @@ a {
   border-color: var(--basic-red);
 }
 
-.sort span {
+.pagination-item a:not([href="#"]) {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.sort .sort-item {
   font-family: "PT Sans", "Arial", serif;
   font-size: 13px;
   line-height: 18px;
@@ -1551,9 +1606,16 @@ a {
   justify-content: space-between;
 }
 
-.sort span:hover {
+.sort .sort-item:hover,
+.sort .sort-item:focus {
   color: var(--basic-black);
   border-bottom: 1px solid var(--basic-red);
+  opacity: 1;
+}
+
+.sort-item.sort-item__active {
+  border: none;
+  color: var(--basic-red);
   opacity: 1;
 }
 
@@ -1589,6 +1651,20 @@ a {
   padding: 0;
   margin: 0;
   margin-bottom: 15px;
+}
+
+.breadcrumbs-list .active {
+  opacity: 0.5;
+}
+
+.breadcrumb-item:not(.active):hover a,
+.breadcrumb-item:not(.active):focus-within a {
+  color: var(--basic-red);
+}
+
+.breadcrumb-item:hover path,
+.breadcrumb-item:focus-within path {
+  fill: var(--basic-red);
 }
 
 .breadcrumb-item {
@@ -1754,6 +1830,16 @@ a {
   width: 27px;
   height: 23px;
   background: url("../img/icon/icon-checkbox-on.svg") no-repeat 0 0;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: var(--basic-red);
+  border-color: violet;
+}
+
+.filter-input:disabled + label {
+  opacity: 0.3;
 }
 
 .filter-input-radio + label::before {
