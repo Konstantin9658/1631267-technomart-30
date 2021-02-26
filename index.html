@@ -65,23 +65,23 @@
     <section class="categories container">
       <h2 class="visually-hidden">Категории</h2>
       <ul class="categories-list">
-        <li class="category-item new">
+        <li class="category-item category__material new">
           <h3 class="category-title">Материалы</h3>
           <a class="button-categories" href="catalog.html">На любой вкус</a>
         </li>
-        <li class="category-item">
+        <li class="category-item category__tool">
           <h3 class="category-title">Инструмент</h3>
           <a class="button-categories" href="catalog.html">На все случаи</a>
         </li>
-        <li class="category-item">
+        <li class="category-item category__technic">
           <h3 class="category-title">Техника</h3>
           <a class="button-categories" href="catalog.html">Для стройки</a>
         </li>
-        <li class="category-item">
+        <li class="category-item category__sale">
           <h3 class="category-title">Скидки 50%</h3>
           <a class="button-categories" href="catalog.html">На 350 товаров</a>
         </li>
-        <li class="category-item">
+        <li class="category-item category__delivery">
           <h3 class="category-title">Доставка</h3>
           <a class="button-categories" href="#">Бесплатно</a>
         </li>
@@ -212,21 +212,20 @@
         <div class="services-wrapper">
           <ul class="services-list">
             <li class="service-item">
-              <button class="button-services active" type="button">Доставка</button>
+              <button class="button-services btn-delivery active" type="button">Доставка</button>
             </li>
             <li class="service-item">
-              <button class="button-services" type="button">Гарантия</button>
+              <button class="button-services btn-guarantee" type="button">Гарантия</button>
             </li>
             <li class="service-item">
-              <button class="button-services" type="button">Кредит</button>
+              <button class="button-services btn-credit" type="button">Кредит</button>
             </li>
           </ul>
           <ul class="points-list">
             <li class="point-item delivery show">
               <h3 class="title point">Доставка</h3>
               <p class="description">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно
-                бесплатно!<br>Ведь мы неплохо
-                заработаем,<br>поднимая его на ваш этаж!</p>
+                бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
             </li>
             <li class="point-item guarantee">
               <h3 class="title point">Гарантия</h3>
@@ -340,26 +339,28 @@
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Обратная связь</h2>
     <div class="modal-block">
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post" id="form-field">
         <p class="feedback-item">
           <label for="user-name-field">Ваше имя:</label>
-            <input type="text" name="user-name" id="user-name-field" placeholder="Имя Фамилия">
+          <input class="modal-user__name" type="text" name="user-name" id="user-name-field" placeholder="Имя Фамилия">
         </p>
         <p class="feedback-item">
           <label for="email-field">Ваш e-mail:</label>
-            <input type="email" name="email" id="email-field" placeholder="email@example.com">
+          <input class="modal-user__email" type="email" name="email" id="email-field" placeholder="email@example.com">
         </p>
         <p class="feedback-item">
           <label for="text-field">Текст письма:</label>
-            <textarea type="text" name="message" id="text-field" placeholder="В свободной форме"></textarea>
+          <textarea class="modal-user__text" type="text" name="message" id="text-field"
+            placeholder="В свободной форме"></textarea>
         </p>
       </form>
     </div>
     <div class="footer-modal">
-      <button type="submit" class="button btn-feedback" aria-label="Отправить форму">Отправить</button>
+      <button type="submit" class="button btn-feedback" aria-label="Отправить форму"
+        form="form-field">Отправить</button>
     </div>
     <button type="button" class="modal-close__feedback" aria-label="Закрыть окно"><svg width="21" height="21"
-        viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
           fill="#EE3643" />
@@ -368,14 +369,37 @@
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858715841545!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614035837439!5m2!1sru!2sru" width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <button class="modal-close__map" type="button" aria-label="Закрыть карту"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858715841545!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614035837439!5m2!1sru!2sru"
+      width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <button class="modal-close__map" type="button" aria-label="Закрыть карту"><svg width="21" height="21"
+        viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+          fill="#EE3643" />
       </svg>
-      </button>
+    </button>
   </section>
+  <div class="modal modal-catalog">
+    <div class="modal-block__catalog">
+      <p class="catalog-description">Товар добавлен в корзину!</p>
+    </div>
+    <div class="footer-modal">
+      <button type="submit" class="button btn-order" aria-label="Оформить заказ">Оформить заказ</button>
+      <button type="button" class="button btn-shopping" aria-label="Продолжить покупки">Продолжить покупки</button>
+    </div>
+    <button type="button" class="modal-close__catalog" aria-label="Закрыть окно"><svg width="21" height="21"
+        viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+          fill="#EE3643" />
+      </svg>
+    </button>
+  </div>
   <script src="js/map.js"></script>
   <script src="js/feedback.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/catalog.js"></script>
 </body>
 
 </html>

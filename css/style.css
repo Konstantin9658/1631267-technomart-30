@@ -491,23 +491,23 @@ a {
   display: block;
 }
 
-.category-item:nth-child(1) {
+.category__material {
   background: var(--special-yellow) url("../img/icon/icon-material.svg") no-repeat 213px center;
 }
 
-.category-item:nth-child(2) {
+.category__tool {
   background: var(--special-blue) url("../img/icon/icon-tool.svg") no-repeat 194px center;
 }
 
-.category-item:nth-child(3) {
+.category__technic {
   background: var(--special-lilac) url("../img/icon/icon-technic.svg") no-repeat 191px center;
 }
 
-.category-item:nth-child(4) {
+.category__sale {
   background: var(--special-greenlight) url("../img/icon/icon-basket.svg") no-repeat 196px center;
 }
 
-.category-item:nth-child(5) {
+.category__delivery {
   background: var(--special-yellow) url("../img/icon/icon-delivery.svg") no-repeat 191px center;
 }
 
@@ -691,12 +691,15 @@ a {
 .button-slider,
 .button-credit,
 .button-popup,
-.button-more {
+.button-more,
+.btn-order {
   background-color: var(--basic-red);
 }
 
 .popular-button,
-.button-slider {
+.button-slider,
+.btn-order,
+.btn-shopping {
   width: 192px;
   height: 38px;
 }
@@ -717,12 +720,14 @@ a {
 .button-popup:hover,
 .button-more:hover,
 .btn-feedback:hover,
+.btn-order:hover,
 .popular-button:focus,
 .button-slider:focus,
 .button-credit:focus,
 .button-popup:focus,
 .button-more:focus,
-.btn-feedback:focus {
+.btn-feedback:focus,
+.btn-order:focus {
   background-color: var(--strong-red);
 }
 
@@ -731,7 +736,8 @@ a {
 .button-credit:active,
 .button-popup:active,
 .button-more:active,
-.btn-feedback:active {
+.btn-feedback:active,
+.btn-order:active {
   background-color: var(--error);
 }
 
@@ -1941,12 +1947,10 @@ a {
 /* Modal index.html */
 
 .modal {
-  position: relative;
   margin: 0 auto;
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   border-top: 7px solid var(--basic-red);
   display: none;
-
 }
 
 .modal-show {
@@ -1959,6 +1963,10 @@ a {
   left: 0;
   margin: auto;
   z-index: 50;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-feedback {
@@ -2000,7 +2008,8 @@ a {
 }
 
 .modal-close__feedback,
-.modal-close__map {
+.modal-close__map,
+.modal-close__catalog {
   position: absolute;
   border: none;
   appearance: none;
@@ -2013,13 +2022,16 @@ a {
 
 .modal-close__feedback:hover path,
 .modal-close__feedback:focus path,
+.modal-close__catalog:hover path,
 .modal-close__map:hover path,
-.modal-close__map:focus path {
+.modal-close__map:focus path,
+.modal-close__catalog:focus path {
   fill: var(--strong-red);
 }
 
 .modal-close__map:active path,
-.modal-close__feedback:active path {
+.modal-close__feedback:active path,
+.modal-close__catalog:active path {
   opacity: 0.3;
 }
 
@@ -2075,6 +2087,59 @@ a {
   resize: none;
 }
 
+/* Modal catalog.html */
+
+.modal-catalog {
+  width: 620px;
+  min-height: 282px;
+}
+
+.modal-block__catalog {
+  background-color: var(--basic-white);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  min-height: 170px;
+}
+
+.catalog-description {
+  margin: 0;
+  padding: 66px 20px 20px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  position: relative;
+}
+
+.catalog-description::before {
+  position: absolute;
+  content: url("../img/icon/icon-mark.svg");
+  left: -81px;
+  top: 45px;
+}
+
+.btn-order {
+  margin-right: 10px;
+}
+
+.btn-shopping {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.btn-shopping:hover,
+.btn-shopping:focus {
+  background-color: var(--rich-green);
+  color: var(--basic-white)
+}
+
+.btn-shopping:active {
+  background-color: var(--success);
+}
+
 /* Animations */
 
 @keyframes bounce {
@@ -2092,6 +2157,28 @@ a {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
