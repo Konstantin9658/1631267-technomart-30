@@ -704,11 +704,6 @@ a {
   height: 38px;
 }
 
-.button-credit {
-  min-width: 195px;
-  min-height: 38px;
-}
-
 .button-popup {
   width: 100%;
   height: 38px;
@@ -1042,7 +1037,7 @@ a {
 
 .services-title {
   padding-top: 64px;
-  padding-bottom: 70px;
+  padding-bottom: 68px;
 }
 
 .services-title .description,
@@ -1052,8 +1047,9 @@ a {
 }
 
 .points-list .description {
-  margin-top: 30px;
+  padding-top: 30px;
   padding-right: 250px;
+  margin: 0;
 }
 
 .services {
@@ -1084,7 +1080,7 @@ a {
   align-items: center;
   padding-left: 22px;
   width: 240px;
-  height: 61px;
+  height: 62px;
   border: none;
   cursor: pointer;
   transition: all 0.3s;
@@ -1096,8 +1092,16 @@ a {
   background-color: var(--very-dark-blue);
 }
 
+.button-credit {
+  min-width: 195px;
+  min-height: 38px;
+  border-radius: 3px;
+}
+
 .services-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 99px;
 }
 
 .points-list {
@@ -1109,7 +1113,6 @@ a {
   grid-column: 1/2;
   padding-left: 80px;
   width: 700px;
-  min-height: 283px;
   display: none;
 }
 
@@ -1128,19 +1131,22 @@ a {
 }
 
 .delivery {
-  background: url("../img/background-delivery.png") no-repeat right 18px;
+  background: url("../img/background-delivery.png") no-repeat right 21px;
 }
 
 .guarantee {
   background: url("../img/background-guarantee.png") no-repeat right 18px;
+  height: 186px;
 }
 
 .credit {
-  background: url("../img/background-credit.png") no-repeat right 20px;
+  background: url("../img/background-credit.png") no-repeat right 0px;
+  margin-right: -10px;
+  width: 710px;
 }
 
 .points-list:last-child .description {
-  padding-bottom: 26.5px;
+  padding-bottom: 23.5px;
 }
 
 /*О компании*/
@@ -1257,18 +1263,15 @@ a {
 }
 
 .navigation-footer {
-  grid-column: 2/3;
-  grid-row: 1/2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 608px;
+  min-height: 82px;
   margin-top: 37px;
-  width: 550px;
-  height: 82px;
 }
 
 .footer-contacts {
-  margin-bottom: 54px;
+  margin-bottom: 39px;
 }
 
 .footer-contacts .container {
@@ -1276,19 +1279,21 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 
-.footer-list-item:not(:last-child) {
-  margin-right: 58px;
+ .footer-list-item {
+  margin-left: 58px;
+  margin-bottom: 34px;
 }
 
 .navigation-list-footer:nth-child(1) {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 4px;
+  justify-content: flex-end;
 }
 
 .navigation-list-footer:nth-child(2) {
   display: flex;
-  margin-left: 27px;
+  flex-wrap: wrap;
+  margin-left: 26px;
 }
 
 
@@ -1317,14 +1322,15 @@ a {
   flex-wrap: wrap;
 }
 
-.social-list-footer li:not(:last-child) {
-  margin-right: 1px;
+.social-list-footer li {
+  margin-right: 4px;
+  margin-top: 4px;
 }
 
 .social-button {
   background: linear-gradient(0deg, var(--sapphire-blue), var(--sapphire-blue));
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1352,7 +1358,9 @@ a {
   color: var(--very-light-orange);
 }
 
-
+.footer-copyright {
+  padding: 10px 0;
+}
 
 .footer-address,
 .footer-contacts-telephone {
@@ -1390,11 +1398,10 @@ a {
 
 .user-info {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   width: 299px;
-  height: 45px;
+  min-height: 45px;
   background-color: var(--basic-white);
   color: var(--basic-black);
   margin-left: auto;
@@ -1415,25 +1422,22 @@ a {
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  margin-left: 21px;
  }
 
- .user-info p {
+ .user-info span {
    margin: 0;
-   padding: 0;
    display: inline-block;
-   margin-left: 19px;
-   margin-bottom: 6px;
+   padding: 0 0 6px 21px;
  }
 
 .user-avatar {
   margin-top: 7px;
   margin-left: 15px;
+  display: flex;
 }
 
 .user-logout {
-  margin-top: 9px;
-  margin-left: 21px;
+  margin: 9px 17px 0 auto;
  }
 
 .my-orders,
@@ -1632,6 +1636,7 @@ a {
 .pagination-item a {
   width: 38px;
   height: 38px;
+  margin-bottom: 10px;
 }
 
 .pagination-item .button-pagination {
@@ -1641,7 +1646,7 @@ a {
 
 .header-middle-block__catalog {
   display: grid;
-  grid-template-columns: repeat(2, max-content) 1fr;
+  grid-template-columns: repeat(2, min-content) 1fr;
 }
 
 .form-catalog {
@@ -1711,7 +1716,8 @@ a {
 }
 
 .sort-title {
-  padding: 10px 140px 10px 18px;
+  padding: 10px 18px;
+  margin-right: auto;
 }
 
 .page-filter {
@@ -1920,6 +1926,7 @@ a {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin-bottom: 0;
   margin-top: 48px;
@@ -1930,7 +1937,7 @@ a {
 }
 
 .definition {
-  margin-top: 59px;
+  margin-top: 49px;
 }
 
 .definition .title {
@@ -1940,7 +1947,7 @@ a {
 
 .definition .description {
   margin: 0;
-  margin-top: 25px;
+  padding-top: 25px;
   padding-bottom: 68px;
 }
 
@@ -1988,7 +1995,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  min-height: 318px;
+  min-height: 311px;
   position: relative;
 }
 
@@ -2003,7 +2010,7 @@ a {
 
 .btn-feedback {
   width: 460px;
-  height: 48px;
+  height: 38px;
   background-color: var(--basic-red);
 }
 
@@ -2054,10 +2061,10 @@ a {
   width: 460px;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 39px auto 37px;
+  margin: 39px auto 0;
 }
 
-.feedback-form p {
+.feedback-item:not(:last-child) {
   margin-bottom: 13px;
 }
 
@@ -2079,11 +2086,13 @@ a {
 .feedback-item:nth-child(1) input,
 .feedback-item:nth-child(2) input {
   width: 220px;
+  min-height: 38px;
 }
 
 .feedback-item:nth-child(3) textarea {
   width: 460px;
   min-height: 114px;
+  padding-top: 7px;
   resize: none;
 }
 
@@ -2100,25 +2109,26 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  min-height: 170px;
+  min-height: 163px;
 }
 
 .catalog-description {
   margin: 0;
-  padding: 66px 20px 20px;
+  padding: 66px 8px 20px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   position: relative;
+  letter-spacing: 0.5px;
 }
 
 .catalog-description::before {
   position: absolute;
   content: url("../img/icon/icon-mark.svg");
-  left: -81px;
-  top: 45px;
+  left: -88px;
+  top: 48px;
 }
 
 .btn-order {
