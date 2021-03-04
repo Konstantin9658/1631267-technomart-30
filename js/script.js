@@ -19,7 +19,7 @@ const itemDelivery = document.querySelector(".delivery");
 const itemGuarantee = document.querySelector(".guarantee");
 const itemCredit = document.querySelector(".credit");
 
-for (const btnBuy of btnBuys) {
+for (btnBuy of btnBuys) {
   btnBuy.addEventListener ("click", function () {
     catalogPopup.classList.add("modal-show");
   })

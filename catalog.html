@@ -7,8 +7,8 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Техномарт: Каталог</title>
 </head>
 
@@ -20,7 +20,7 @@
           <img src="img/logo/logo-technomart.svg" width="108" height="18" alt="Логотип сайта «Техномарт»">
         </a>
         <form class="header-form" action="#" method="POST">
-          <label for="search-field">
+          <label for="search-field" aria-label="Поле поиска товара">
             <input class="search" type="search" name="search" id="search-field" placeholder="Поиск:">
           </label>
         </form>
@@ -212,7 +212,7 @@
             </div>
             <h3 class="card-description">Перфоратор BOSCH BFG 6000</h3>
             <s class="old-price">30500 Р.</s>
-            <a class="button-price" href="#">25500 Р.</a></button>
+            <a class="button-price" href="#">25500 Р.</a>
             <div class="buttons card-buttons">
               <button class="button button-buy" type="button" aria-label="Добавить товар в корзину">Купить</button>
               <button class="button button-mark" type="button" aria-label="Добавить товар в закладки">В закладки</button>
@@ -452,7 +452,7 @@
       </svg>
     </button>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/catalog.min.js"></script>
 </body>
 
 </html>

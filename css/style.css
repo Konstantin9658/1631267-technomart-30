@@ -89,6 +89,7 @@
   --basic-green: #63a63e;
   --basic-grey: #3d546f;
   --gray: #ababab;
+  --pale-gray: #b5b5b5;
   --basic-background: #f1f5f7;
   --very-light-gray: #eaeaea;
   --light-gray: #e5e5e5;
@@ -310,12 +311,12 @@ img {
 .header-bookmark:hover::before,
 .header-cart:focus::before,
 .header-cart:hover::before {
-  opacity: 1
+  opacity: 1;
 }
 
 .header-bookmark:active::before,
 .header-cart:active::before {
-  opacity: .3
+  opacity: .3;
 }
 
 .header-cart::before {
@@ -326,12 +327,12 @@ img {
   opacity: .3;
   margin-right: 8px;
   line-height: 20px;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 .header-middle-block {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .header-order:focus,
@@ -920,7 +921,8 @@ img {
   display: block
 }
 
-.button-buy,.button-mark {
+.button-buy,
+.button-mark {
   display: block;
   width: 135px;
   padding: 7px 0;
@@ -948,7 +950,8 @@ img {
   display: inline-block;
   opacity: .3;
   left: 28px;
-  top: 10px
+  top: 10px;
+  vertical-align: middle;
 }
 
 .button-mark {
@@ -1712,8 +1715,8 @@ img {
 
 .sort-title,
 .title-filter {
-  display: inline-block;
-  margin: 0
+  display: block;
+  margin: 0;
 }
 
 .title-filter {
@@ -1838,7 +1841,7 @@ img {
   width: 23px;
   height: 23px;
   border: 2px solid var(--basic-greylight);
-  border-radius: 2px
+  border-radius: 3px
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1855,10 +1858,16 @@ img {
   background: url(../img/icon/icon-checkbox-on.svg) no-repeat 0 0
 }
 
-.filter-input:focus+label,
-.filter-input:hover+label {
+.filter-input-checkbox + label:hover::before,
+.filter-input-radio + label:hover::before,
+.filter-input-checkbox:focus-visible + label::before,
+.filter-input-radio:focus-visible + label::before {
+  border-color: var(--pale-gray);
+}
+
+.filter-input:focus-visible + label,
+.filter-input:hover + label {
   color: var(--basic-red);
-  border-color: violet
 }
 
 .filter-input:disabled + label {
@@ -1885,6 +1894,11 @@ img {
   height: 9px;
   background-color: var(--basic-greylight);
   border-radius: 50%
+}
+
+.filter-input-radio:checked:hover + label::after,
+.filter-input-radio:checked:focus-visible + label::after {
+  background-color: var(--pale-gray);
 }
 
 .powers legend {
